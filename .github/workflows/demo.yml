@@ -1,0 +1,15 @@
+name: PowerShell Example
+
+on: [push]
+
+jobs:
+  powershell-job:
+    runs-on: windows-2022
+    steps:
+      - name: Check PowerShell Version
+        run: $PSVersionTable
+      - name: Run Windows Commands
+        run: |
+          Get-Date
+          Get-ComputerInfo
+          Write-Host "Running on Windows 2022"
