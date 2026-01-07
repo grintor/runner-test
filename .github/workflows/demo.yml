@@ -5,6 +5,9 @@ on: [push]
 jobs:
   powershell-job:
     runs-on: windows-2022
+    permissions:
+      contents: write
+
     steps:
 
       - name: Checkout code
