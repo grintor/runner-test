@@ -20,6 +20,12 @@ jobs:
           whoami
           net session
 
+      - name: test persistance
+        run: |
+          dir $env:tmp
+          echo hi > $env:tmp\blah.txt
+          dir $env:tmp
+
       - name: Commit and Push Changes
         run: |
           git config --global user.name "github-actions[bot]"
