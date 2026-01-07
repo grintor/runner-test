@@ -6,8 +6,10 @@ jobs:
   powershell-job:
     runs-on: windows-2022
     steps:
-      - name: Check PowerShell Version
-        run: $PSVersionTable
+
+      - name: Checkout code
+        uses: actions/checkout@v4
+
       - name: Run Windows Commands
         run: |
           choco install nircmd -y
